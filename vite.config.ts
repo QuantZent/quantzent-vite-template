@@ -4,6 +4,7 @@ import { fileURLToPath } from 'node:url';
 import { defineConfig } from 'vite';
 import checker from 'vite-plugin-checker';
 import tsconfigPaths from 'vite-tsconfig-paths'
+import react from '@vitejs/plugin-react'
 //import { splitVendorChunkPlugin } from 'vite'
 
 export default defineConfig({
@@ -12,6 +13,7 @@ export default defineConfig({
     },
     publicDir: "public",
     plugins: [
+        react(),
         tsconfigPaths(),
         //splitVendorChunkPlugin(),
         checker({
